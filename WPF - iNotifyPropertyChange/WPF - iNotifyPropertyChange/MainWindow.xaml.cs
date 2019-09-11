@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPF___Dependancy_Properties
+namespace WPF___iNotifyPropertyChange
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -21,20 +21,13 @@ namespace WPF___Dependancy_Properties
     public partial class MainWindow : Window
     {
 
-        public int MyProperty
-        {
-            get { return (int) GetValue(MyDependencyProperty);}
-            set { SetValue(MyDependencyProperty,value);}
-        }
-
-        public static readonly DependencyProperty MyDependencyProperty =
-            DependencyProperty.Register("My propterty",typeof(int),typeof(MainWindow),new PropertyMetadata(0));
+        public Sum Sumobj { get; set; }
         public MainWindow()
         {
             InitializeComponent();
-            
+            Sumobj = new Sum {Num1 = "1", Num2 = "3"};
+            this.DataContext = Sumobj;
+
         }
-
-
     }
 }

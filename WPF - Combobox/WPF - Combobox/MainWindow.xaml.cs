@@ -13,28 +13,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPF___Dependancy_Properties
+namespace WPF___Combobox
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-
-        public int MyProperty
-        {
-            get { return (int) GetValue(MyDependencyProperty);}
-            set { SetValue(MyDependencyProperty,value);}
-        }
-
-        public static readonly DependencyProperty MyDependencyProperty =
-            DependencyProperty.Register("My propterty",typeof(int),typeof(MainWindow),new PropertyMetadata(0));
         public MainWindow()
         {
             InitializeComponent();
-            
+
+            comboBoxColors.ItemsSource = typeof(Colors).GetProperties();
         }
-
-
     }
 }
