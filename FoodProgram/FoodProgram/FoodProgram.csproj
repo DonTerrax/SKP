@@ -59,6 +59,14 @@
     <Compile Include="foodDataSet.cs">
       <DependentUpon>foodDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="foodDataSet1.cs">
+      <DependentUpon>foodDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="foodDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>foodDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TerraxDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -111,6 +119,17 @@
     </None>
     <None Include="foodDataSet.xss">
       <DependentUpon>foodDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="foodDataSet1.xsc">
+      <DependentUpon>foodDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="foodDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>foodDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="foodDataSet1.xss">
+      <DependentUpon>foodDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
