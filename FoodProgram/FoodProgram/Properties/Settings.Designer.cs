@@ -32,5 +32,16 @@ namespace FoodProgram.Properties {
                 return ((string)(this["foodConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ZBC-EVB-SKP2411\\TERRAXSQL;Initial Catalog=TerraxDB;Persist Security I" +
+            "nfo=True;User ID=sa")]
+        public string TerraxDBConnectionString {
+            get {
+                return ((string)(this["TerraxDBConnectionString"]));
+            }
+        }
     }
 }

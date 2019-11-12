@@ -15,23 +15,7 @@ namespace FoodProgram
     public abstract class Database : INotifyPropertyChanged
     {
 
-
         public event PropertyChangedEventHandler PropertyChanged;
-
-
-        private static CoreDispatcher dispatcher = Window.Current.Dispatcher;
-
-        protected async virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-                () =>
-                {
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-                });
-
-
-        }
-
 
     }
 
