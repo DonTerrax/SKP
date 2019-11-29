@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,24 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FoodProgram
+namespace WPF_data_binding_INotifyPropertyChanged
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        private SqlConnection sqlConnection;
+        CountModel countModel = new CountModel();
         public MainWindow()
         {
             InitializeComponent();
-            string connectionString = ConfigurationManager.ConnectionStrings["databaseConnectionString"].ConnectionString;
-            sqlConnection = new SqlConnection(connectionString);
+            counterLabel.DataContext = countModel;
         }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            countModel.Counter++;
         }
     }
 }

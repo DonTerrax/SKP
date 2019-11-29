@@ -2,8 +2,9 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:FoodProgram"
-             StartupUri="MainWindow.xaml">
+             xmlns:class="clr-namespace:FoodProgram.Class"
+             StartupUri="WPF Windows/MainWindow.xaml">
     <Application.Resources>
-         
+        <class:UserViewModel x:Key="UserViewModel"></class:UserViewModel>
     </Application.Resources>
 </Application>

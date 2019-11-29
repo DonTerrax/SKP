@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ECAFE742-A879-4FFC-8C66-8C16A51937A7}</ProjectGuid>
+    <ProjectGuid>{E4BD5E53-C072-401F-B706-C21562A5FFDF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>FoodProgram</RootNamespace>
-    <AssemblyName>FoodProgram</AssemblyName>
+    <RootNamespace>WPF_data_binding_INotifyPropertyChanged</RootNamespace>
+    <AssemblyName>WPF data binding INotifyPropertyChanged</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -36,7 +36,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,33 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Class\CheckUserInfo.cs" />
-    <Compile Include="Class\CreateUserAccount.cs" />
-    <Compile Include="Class\DatabaseConnection.cs" />
-    <Compile Include="Class\User.cs" />
-    <Compile Include="Class\RelayCommand.cs" />
-    <Compile Include="Class\SignupViewmodel.cs" />
-    <Compile Include="Class\UserViewModel.cs" />
-    <Compile Include="foodDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>foodDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\IUser.cs" />
-    <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="WPF Windows\RecoverPassword.xaml.cs">
-      <DependentUpon>RecoverPassword.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Class\Signup.cs" />
-    <Compile Include="WPF Windows\SignUp_Window.xaml.cs">
-      <DependentUpon>SignUp_Window.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TerraxDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TerraxDBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Page Include="WPF Windows\MainWindow.xaml">
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -90,20 +63,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="WPF Windows\MainWindow.xaml.cs">
+    <Compile Include="CountModel.cs" />
+    <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="WPF Windows\RecoverPassword.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WPF Windows\SignUp_Window.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -121,36 +88,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="foodDataSet.xsc">
-      <DependentUpon>foodDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="foodDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>foodDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="foodDataSet.xss">
-      <DependentUpon>foodDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="TerraxDBDataSet.xsc">
-      <DependentUpon>TerraxDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="TerraxDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TerraxDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TerraxDBDataSet.xss">
-      <DependentUpon>TerraxDBDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="FoodProgram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FoodProgram"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="392" Width="243.5">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="103*"/>
+            <ColumnDefinition Width="94*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="0,-40,0,70" >
+            <StackPanel  HorizontalAlignment="Center">
+                <Label Name="Username" >Username</Label>
+                <TextBox Width="150" ></TextBox>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center">
+                <Label Name="Password">Password</Label>
+
+                <TextBox  Width="150" ></TextBox>
+                <TextBlock HorizontalAlignment="center">
+                    
+                    <Hyperlink NavigateUri="http://stackoverflow.com" RequestNavigate="Hyperlink_RequestNavigate">Forgot password</Hyperlink>
+                </TextBlock>
+                <Button Content="User" Margin="10" Click="Login"/>
+
+                <Button Margin="10,0,10,0" Click="Sign_Up">Sign up</Button>
+
+            </StackPanel>
+
+
+
+        </StackPanel>
+    </Grid>
+</Window>
